@@ -1,14 +1,14 @@
 {
-  "name": "n8n-nodes-bolcomshared",
+  "name": "n8n-nodes-bolcom-shared",
   "version": "0.1.0",
-  "description": "",
+  "description": "Bol.com Shared api v10",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "Felix",
+    "name": "FelixClements",
     "email": "mvr600@gmail.com"
   },
   "repository": {
@@ -36,13 +36,14 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js"
-        ],
+      "dist/credentials/BolComOAuth2Api.credentials.ts"
+    ],
     "nodes": [
       "dist/nodes/BolComShared/BolComShared.node.js"
-        ]
+    ]
   },
   "devDependencies": {
+    "@types/node": "^22.7.3",
     "@typescript-eslint/parser": "^7.15.0",
     "eslint": "^8.56.0",
     "eslint-plugin-n8n-nodes-base": "^1.16.1",
@@ -53,5 +54,8 @@
   },
   "peerDependencies": {
     "n8n-workflow": "*"
+  },
+  "dependencies": {
+    "axios": "^1.7.7"
   }
 }

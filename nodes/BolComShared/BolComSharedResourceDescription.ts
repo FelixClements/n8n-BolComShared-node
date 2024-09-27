@@ -22,7 +22,7 @@ export const bolcomResourceOperations: INodeProperties[] = [
             method: 'GET',
             url: '/process-status',
 						headers: {
-							'Authorization': 'Bearer {{$credentials.bolComOAuth2Api.accessToken}}'
+							'Authorization': '=Bearer {{$credentials.bolComOAuth2Api.accessToken}}'
 						},
             qs: {
               entityId: '={{ $parameter["entityId"] }}',
@@ -39,11 +39,11 @@ export const bolcomResourceOperations: INodeProperties[] = [
         routing: {
           request: {
             method: 'GET',
-            url: '/process-status/{{ $parameter["processStatusId"] }}',
+						url: '=/process-status/{{$parameter["processStatusId"]}}',
 						headers: {
-							'Authorization': 'Bearer {{$credentials.bolComOAuth2Api.accessToken}}'
+							'Authorization': '=Bearer {{$credentials.bolComOAuth2Api.accessToken}}'
 						},
-          },
+					},
         },
         action: 'Get status of a process by process status ID',
       },
@@ -56,7 +56,7 @@ export const bolcomResourceOperations: INodeProperties[] = [
             method: 'POST',
             url: '/process-status',
 						headers: {
-							'Authorization': 'Bearer {{$credentials.bolComOAuth2Api.accessToken}}'
+							'Authorization': '=Bearer {{$credentials.bolComOAuth2Api.accessToken}}'
 						},
             body: {
               processStatusQueries: '={{ $parameter["processStatusQueries"] }}',
