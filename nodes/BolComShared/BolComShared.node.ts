@@ -11,7 +11,7 @@ export class BolComShared implements INodeType {
     subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
     description: 'Interact with bol.com Shared API for asynchronous process statuses',
     defaults: {
-      name: 'Bol.com',
+      name: 'Bol.com Shared',
     },
     inputs: ['main'],
     outputs: ['main'],
